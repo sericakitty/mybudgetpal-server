@@ -130,7 +130,7 @@ public class AuthController {
       HttpServletRequest request)
       throws MessagingException {
 
-    if (userRepository.findByEmail(signupRequest.getEmail()) != null) {
+    if (userRepository.findByEmail(signupRequest.getEmail()).isPresent()) {
       return ResponseEntity.badRequest().body(new MessageResponse("Email already exists",  "error"));
     }
 
@@ -142,7 +142,7 @@ public class AuthController {
       return ResponseEntity.badRequest().body(new MessageResponse("Last name can only contain letters",  "error"));
     }
 
-    if (userRepository.findByUsername(signupRequest.getUsername()) != null) {
+    if (userRepository.findByUsername(signupRequest.getUsername()).isPresent()) {
       return ResponseEntity.badRequest().body(new MessageResponse("Username already exists",  "error"));
     }
 
