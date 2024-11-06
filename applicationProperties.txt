@@ -1,0 +1,12 @@
+spring.application.name
+logging.level.org.springframework.web=DEBUG
+logging.level.your.package=DEBUG
+spring.data.rest.base-path=/
+spring.profiles.active // development or production
+app.jwtSecret
+app.jwtExpirationMs=7200000 // 2h
+app.jwtCookieName
+spring.main.allow-circular-references=true
+spring.data.mongodb.uri
+spring.data.mongodb.database
+spring.data.mongodb.port
