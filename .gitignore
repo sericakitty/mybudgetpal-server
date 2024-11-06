@@ -1,0 +1,8 @@
+target
+.env.production
+.env.development
+.env
+.DS_Store
+application.properties
+.vscode
+requests
